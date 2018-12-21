@@ -1,0 +1,81 @@
+/* pages/show/show.wxss */
+.name {
+  width:100%;
+  margin-bottom: 30rpx;
+  font-size: 45rpx;
+  text-align:center;
+}
+.author {
+  width:100%;
+  text-align:center;
+  color:#525050
+}
+
+.award,.industry {
+  color: #fff;
+  font-size: 25rpx;
+  text-align:center
+}
+  .award text,.industry text{
+    background: #c72541;
+  }
+.all image {
+  width:90%;
+  height:700rpx;
+  /* border: 1rpx red solid; */
+  margin-left: 5%;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+  box-shadow:0px 2px 4px 2px #eee;
+}
+swiper,swiper-item {
+
+    height: 750rpx;
+
+}
+.about {
+  width:90%;
+  margin-left: 5%;
+  height: 350rpx;
+  /* background: #f7f7f7; */
+  border-radius: 10rpx;
+  margin-top: 55rpx;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #525050;
+}
+.showAbout {
+  width:100%;
+  border-radius: 10rpx;
+  background: #faf9f9;
+  overflow: hidden;
+  font-size: 22rpx;
+}
+  .showAbout text {
+    font-size: 28rpx;
+    color:#c72541
+  }
+.showcmf {
+  margin-bottom: 30rpx; 
+}
+.nav,.nav2 {
+  display:flex;
+  /* 属性用于指定弹性盒子的子元素换行方式。*/
+  flex-wrap:wrap;
+}
+  .nav-item {
+    width: 50%;
+    line-height: 70rpx;
+  }
+.nav2 {
+  width: 80%;
+  text-align:center;
+  margin:5% 10% 0 10%;
+}
+  .nav-item2 {
+    width:33.3%;
+    line-height: 60rpx;
+  }
+.jie {
+  margin-top: 3+0rpx;
+}

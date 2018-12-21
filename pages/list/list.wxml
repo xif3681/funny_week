@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<view class='page_row' >
+    <form bindsubmit="formFind">
+      <view class="search">
+        <view class="df search_arr">       
+          <input placeholder="请输入关键字" name='keywork'/>
+        </view>
+      </view>
+      <!-- <view class='sousuo' >搜索</view> -->
+      <button class="searchcion" formType="submit"><icon size='20' type='search' color="#fff"></icon></button>
+    </form>
+</view>
+
+<view class="lie">
+  <view wx:for="{{items}}"  wx:for-index='key'>
+    <view class="shop" bindtap='toShow' id="{{item.id}}"><!--此处的id是进行传值进入详情页-->
+      <image class="shopImg" src="{{item.topImage}}"></image>
+        
+      <view class="shopInfo">
+          <text class="shopTitle">{{item.name}}</text>
+          <text class="shopTel">{{item.designer}}</text>
+          <text>{{item.addTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom">
+  <view class="fenYe">
+    <button class='ye' hover-class='change' bindtap="toUp">《</button>
+    <form bindsubmit="formSubmit">
+      <input placeholder="页码" name="page" value="{{list.page}}"></input>
+      <button formType="submit" hover-class='change' type="primary">Go</button>
+    </form>
+    
+    <button class='ye' hover-class='change' bindtap="toNext">》 </button>
+    <view>共 {{totalPage}} 页</view>
+  </view>
+</view>
+

@@ -1,0 +1,31 @@
+/* pages/about/about.wxss */
+button {
+  background: #000;
+  width:100%;
+  height:400rpx;
+  position:absolute;
+  right: 1rpx;
+}
+page {
+    background: #f1f1f1;
+}
+.avater {
+    background: #000;
+    height: 400rpx;
+}
+    .userinfo-avatar {
+        width:200rpx;
+        height: 200rpx;
+        border: 5rpx rgba(141, 140, 140, 0.822) solid;
+        border-radius:100%;
+        z-index:12;
+    }
+.btn {
+   width:150rpx;
+   height: 100rpx;
+   font-size:20rpx;
+}
+.xinxi {
+  position: absolute;
+  right: 80rpx;
+}

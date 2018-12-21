@@ -1,0 +1,34 @@
+<!--pages/show/show.wxml-->
+<view class="">
+  <view class="name">{{works.name}}</view>
+  <view class="author">作者：{{works.designer}}</view>
+</view>
+<view class="nav2"> 
+  <view class="industry nav-item2"><text>{{industry.name}}</text></view>
+  <view class="award nav-item2"><text>{{award.name}}</text></view> 
+  <view class="industry nav-item2" wx:if="{{works.open == true}}"><text>公开</text></view>
+  <view class="industry nav-item2" wx:if="{{works.open == false}}"><text>非公开</text></view>
+</view>
+  <view >
+    <swiper class="all">
+      <swiper-item wx:for="files" >
+        <image src="{{files[index].fileKey}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="about">
+    <!-- <view class="nav">
+      <view class="nav-item">用户：{{list[requestId].people}}</view><view class="nav-item">技术：{{list[requestId].tec}}</view>
+      <view class="nav-item">场景：{{list[requestId].place}}</view><view class="nav-item">功能 : {{list[requestId].gong}}</view>
+    </view> -->
+    <view wx:for="descriptions" class="jie">
+      <view  class="showAbout" wx:if="{{descriptions[index].descriptionType == 1}}"><text >痛点：</text>
+      {{descriptions[index].description}}</view>
+      <view  class="showAbout" wx:if="{{descriptions[index].descriptionType == 2}}"><text>作品简介：</text>
+      {{descriptions[index].description}}</view>
+      <view  class="showAbout" wx:if="{{descriptions[index].descriptionType == 3}}"><text>人机交互：</text>
+      {{descriptions[index].description}}</view>
+      <view  class="showAbout showcmf" wx:if="{{descriptions[index].descriptionType == 4}}"><text>设计CMF：</text>
+      {{descriptions[index].description}}</view>
+    </view>
+  </view>
